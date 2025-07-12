@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Baloo+2:wght@400;500;600;700&display=swap');
+
+/* Definition of the design system with cultural colors */
+@theme {
+  --default-transition-duration: 150ms;
+  --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Color palette with cultural theme */
+  --color-background: hsl(35 100% 98%);
+  --color-foreground: hsl(20 14% 4%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(20 14% 4%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(20 14% 4%);
+  
+  /* Saffron primary */
+  --color-primary: hsl(25 95% 53%);
+  --color-primary-foreground: hsl(0 0% 98%);
+  
+  /* Warm cream secondary */
+  --color-secondary: hsl(35 50% 95%);
+  --color-secondary-foreground: hsl(20 14% 4%);
+  --color-muted: hsl(35 30% 92%);
+  --color-muted-foreground: hsl(25 8% 45%);
+  
+  /* Maroon accent */
+  --color-accent: hsl(350 70% 35%);
+  --color-accent-foreground: hsl(0 0% 98%);
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+  --color-border: hsl(35 20% 87%);
+  --color-input: hsl(35 20% 87%);
+  --color-ring: hsl(25 95% 53%);
+  
+  /* Custom cultural colors */
+  --color-saffron: hsl(25 95% 53%);
+  --color-maroon: hsl(350 70% 35%);
+  --color-gold: hsl(45 90% 58%);
+  --color-cream: hsl(35 50% 95%);
+  
+  /* Border radius */
+  --radius: 0.75rem;
+  
+  /* Font families */
+  --font-hind: 'Hind Siliguri', sans-serif;
+  --font-baloo: 'Baloo 2', cursive;
+}
