@@ -18,12 +18,12 @@ const HeroSection = () => {
             giving.
           </p>
         </div>
-        <div className="flex flex-col gap-4 justify-center">
+        <div className="flex flex-col gap-4 justify-center pt-4">
             <div className="relative">
                 <Input className="min-w-xl pl-9 shadow-lg" placeholder="Find Bhandaras by City, Date or Temple Name"/>
                 <Search className="absolute top-1.5 left-1.5 text-neutral-400"/>
             </div>
-            <div className="flex mx-auto gap-2 items-center justify-center text-center">
+            <div className="flex mx-auto gap-2 items-center justify-center text-center pt-4">
                 <Button className=" bg-gradient-to-r from-saffron to-gold hover:text-xl cursor-pointer px-5 py-1 font-semibold text-md " >
                     <Plus className="hover:text-xl"/>
                     List Your Bhandara

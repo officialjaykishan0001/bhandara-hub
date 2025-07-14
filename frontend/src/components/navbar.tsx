@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-white shadow-sm absolute">
+    <div className="w-full bg-white shadow-sm fixed top-0">
       <header className="flex sm:justify-between items-center max-w-7xl mx-auto py-2 px-8">
         <a href="/">
           <div className="flex items-center gap-2">
@@ -54,10 +54,10 @@ const Navbar = () => {
               <span>About</span>
             </a>
           </nav>
-          <div className="flex items-center gap-2 text-neutral-500">
+          <div className="flex items-center gap-2 ">
             <Button
-              variant={"ghost"}
-              className="flex items-center cursor-pointer"
+              variant={"default"}
+              className="flex items-center cursor-pointer text-neutral-500 bg-white hover:bg-white"
             >
               <LogIn className="text-neutral-500" />
               Sign Up
