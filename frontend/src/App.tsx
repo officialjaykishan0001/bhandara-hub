@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages";
-import AllEvents from './pages/all-events'
+import Events from './pages/Events'
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index/>} />
-        <Route path='/all-events' element={<AllEvents/>} />
+        <Route path='/events' element={<Events/>} />
       </Routes>
       </BrowserRouter>
     </>

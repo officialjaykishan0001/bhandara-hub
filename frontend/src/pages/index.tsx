@@ -1,14 +1,12 @@
 import HeroSection from "../components/hero-section";
-import Navbar from "../components/navbar";
 import BhandaraCard from "../components/bhandara-card";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/footer";
+import Layout from "../components/layout/layout";
 
 const Index = () => {
   return (
     <>
-      <div className="w-full bg-background font-hind min-h-screen ">
-        <Navbar />
+      <Layout>
         <div className="max-w-7xl mx-auto pt-16">
           <HeroSection />
           <section>
@@ -38,8 +36,7 @@ const Index = () => {
             </div>
           </section>
         </div>
-        <Footer />
-      </div>
+      </Layout>
     </>
   );
 };

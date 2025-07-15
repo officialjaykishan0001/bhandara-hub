@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-white shadow-sm fixed top-0">
+    <div className="w-full bg-white shadow-sm fixed top-0 z-10">
       <header className="flex sm:justify-between items-center max-w-7xl mx-auto py-2 px-8">
         <a href="/">
           <div className="flex items-center gap-2">
@@ -21,9 +21,9 @@ const Navbar = () => {
         <div className="flex items-center sm:justify-between ">
           <nav className="flex gap-4">
             <a
-              href="/all-events"
+              href="/events"
               className={`flex items-center space-x-2 transition-colors duration-200 font-medium ${
-                location.pathname === "/all-events"
+                location.pathname === "/events"
                   ? "text-saffron"
                   : "text-muted-foreground hover:text-saffron"
               }`}
