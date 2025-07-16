@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-white shadow-sm fixed top-0 z-10">
+    <div className="w-full bg-white shadow-sm fixed top-0 ">
       <header className="flex sm:justify-between items-center max-w-7xl mx-auto py-2 px-8">
         <a href="/">
           <div className="flex items-center gap-2">
