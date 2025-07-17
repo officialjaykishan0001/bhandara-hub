@@ -1,10 +1,10 @@
-import { Calendar, Flame, Info, Plus, UserPlus } from "lucide-react";
+import { Calendar, Flame, Info, Menu, Plus, UserPlus } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
     <div className="w-full bg-white shadow-sm fixed top-0 z-5">
-      <header className="flex sm:justify-between items-center max-w-7xl mx-auto py-2 px-8">
+      <header className="flex justify-between items-center max-w-7xl mx-auto py-2 px-8">
         <a href="/">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-l from-gold to-saffron">
@@ -18,7 +18,7 @@ const Navbar = () => {
             </div>
           </div>
         </a>
-        <div className="flex items-center sm:justify-between ">
+        <div className="hidden md:flex items-center sm:justify-between ">
           <nav className="flex gap-4">
             <a
               href="/events"
@@ -62,6 +62,9 @@ const Navbar = () => {
               </a>
             </Button>
           </div>
+        </div>
+        <div className="md:hidden">
+          <Menu/>
         </div>
       </header>
     </div>

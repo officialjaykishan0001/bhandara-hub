@@ -23,7 +23,7 @@ const Events = () => {
               </p>
               <div className="relative w-[70%] mx-auto">
                 <Input
-                  className="min-w-xl pl-9 shadow-lg bg-accent-foreground "
+                  className="sm:min-w-xl pl-9 shadow-lg bg-accent-foreground "
                   placeholder="Find Bhandaras by City, Date or Temple Name"
                 />
                 <Search className="absolute top-1.5 left-1.5 text-neutral-400" />
@@ -37,7 +37,7 @@ const Events = () => {
         </section>
         <section className="py-8">
           <div className="w-full flex justify-center rounded-lg">
-            <span className="max-w-[45%] h-10 mx-auto flex  items-center text-gray-700 bg-gray-200 text-center  p-1 rounded-lg text-sm">
+            <span className="sm:max-w-[45%] h-10 mx-auto flex  items-center text-gray-700 bg-gray-200 text-center  p-1 rounded-lg text-sm">
               <p
                 onClick={() => setEvents("allEvents")}
                 className={`h-8 rounded-lg cursor-pointer py-1 px-4 ${
@@ -68,7 +68,7 @@ const Events = () => {
             <p className="text-neutral-500 text-center py-4">
               Showing 6 of 6 events
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-6xl mx-auto py-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[20rem] sm:w-6xl mx-auto py-10">
               <BhandaraCard />
               <BhandaraCard />
               <BhandaraCard />

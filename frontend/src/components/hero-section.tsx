@@ -1,4 +1,3 @@
-import React from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Flame, LocateIcon, Plus, Search } from "lucide-react";
@@ -22,7 +21,7 @@ const HeroSection = () => {
         </div>
         <div className="flex flex-col gap-4 justify-center pt-4">
             <div className="relative">
-                <Input className="min-w-xl pl-9 shadow-lg" placeholder="Find Bhandaras by City, Date or Temple Name"/>
+                <Input className="sm:min-w-xl pl-9 shadow-lg" placeholder="Find Bhandaras by City, Date or Temple Name"/>
                 <Search className="absolute top-1.5 left-1.5 text-neutral-400"/>
             </div>
             <div className="flex mx-auto gap-2 items-center justify-center text-center pt-4">
