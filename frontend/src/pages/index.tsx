@@ -30,7 +30,7 @@ const Index = () => {
               </div>
               <div className="text-center pb-6">
                 <Button className="text-saffron bg-transparent border border-saffron hover:bg-saffron hover:text-white cursor-pointer px-5 py-1 font-semibold text-md ">
-                  View All bhandaras
+                  <a href="/events">View All bhandaras</a>
                 </Button>
               </div>
             </div>

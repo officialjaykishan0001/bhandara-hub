@@ -1,11 +1,13 @@
 import React from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import { LocateIcon, Plus, Search } from "lucide-react";
+import { Flame, LocateIcon, Plus, Search } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="w-full mx-auto my-20">  
+    <div className="w-full mx-auto my-20">
+      <Flame size={30} className="text-saffron/40 animate-bounce absolute left-14 top-28"/>
+      <Flame size={20} className="text-saffron/20 animate-bounce duration-1000 absolute right-14"/>
       <div className="flex flex-col justify-center items-center text-center gap-6"> 
         <div className="flex flex-col  justify-center gap-4 w-full">
           <h1 className="text-maroon font-baloo text-6xl font-semibold">

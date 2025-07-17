@@ -50,7 +50,6 @@
   --font-hind: "Hind Siliguri", sans-serif;
   --font-baloo: "Baloo 2", cursive;
 
-
 }
 
 .dark {
@@ -98,10 +97,7 @@
 
 @layer utilities {
   .cultural-gradient {
-    background: linear-gradient(
-      135deg,
-      bg-saffron 0%,
-      bg-gold 100%
-    );
+    background: linear-gradient(135deg, bg-saffron 0%, bg-gold 100%);
   }
 }
+

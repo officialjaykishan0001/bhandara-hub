@@ -1,14 +1,14 @@
-import { Calendar, Flame, Info, LogIn, Plus, UserPlus } from "lucide-react";
+import { Calendar, Flame, Info, Plus, UserPlus } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-white shadow-sm fixed top-0 ">
+    <div className="w-full bg-white shadow-sm fixed top-0 z-5">
       <header className="flex sm:justify-between items-center max-w-7xl mx-auto py-2 px-8">
         <a href="/">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 flex items-center justify-center rounded-full bg-saffron/10">
-              <Flame className="text-saffron" />
+            <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-l from-gold to-saffron">
+              <Flame className="text-white" />
             </div>
             <div className="flex flex-col">
               <h3 className="font-baloo text-maroon text-xl">Bhandara</h3>
@@ -54,17 +54,12 @@ const Navbar = () => {
               <span>About</span>
             </a>
           </nav>
-          <div className="flex items-center gap-2 ">
-            <Button
-              variant={"default"}
-              className="flex items-center cursor-pointer text-neutral-500 bg-white hover:bg-white"
-            >
-              <LogIn className="text-neutral-500" />
-              Sign Up
-            </Button>
+          <div className="px-4">
             <Button className="bg-gradient-to-r from-saffron to-gold  cursor-pointer h-fit">
-              <UserPlus />
-              Sign In
+              <a href="/signup" className="flex gap-1 items-center">
+                <UserPlus />
+                Sign Up
+              </a>
             </Button>
           </div>
         </div>
