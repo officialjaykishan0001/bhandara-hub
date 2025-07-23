@@ -2,8 +2,15 @@ import HeroSection from "../components/hero-section";
 import BhandaraCard from "../components/bhandara-card";
 import { Button } from "@/components/ui/button";
 import Layout from "../components/layout/layout";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { increment } from "@/redux/counterSlice";
 
 const Index = () => {
+  const count = useAppSelector((state) => state.counter.value)
+  console.log(count);
+  const dispatch = useAppDispatch()
+  dispatch(increment());
+  console.log(count);
   return (
     <>
       <Layout>
