@@ -4,6 +4,7 @@ import Events from "./pages/Events";
 import Signup from "./pages/signup";
 import Signin from "./pages/singin";
 import BhandaraDetail from "./pages/bhandaraDetail";
+import Profile from "./pages/profile";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/bhandara/:id" element={<BhandaraDetail/>} />
+          <Route path='/profile' element={<Profile/>}/>
         </Routes>
       </BrowserRouter>
     </>

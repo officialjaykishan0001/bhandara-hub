@@ -69,7 +69,7 @@ const Signin = () => {
                 </Button>
                 <p className="text-sm text-neutral-500">
                   Don't have an account?{" "}
-                  <a href="/signin" className="text-saffron">
+                  <a href="/signup" className="text-saffron">
                     Sign Up here
                   </a>
                 </p>

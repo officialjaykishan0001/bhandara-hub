@@ -1,9 +1,16 @@
 import { Calendar, Flame, Info, Menu, Plus, UserPlus } from "lucide-react";
 import { Button } from "./ui/button";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { setHamburger, setListEvent } from "@/redux/navSlice";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Navbar = () => {
+  const dispatch = useAppDispatch();
+  const listEvent = useAppSelector((state) => state.nav.listEvent);
+  const isProfile = useAppSelector((state) => state.nav.isProfile);
+
   return (
-    <div className="w-full bg-white shadow-sm fixed top-0 z-5">
+    <div className="w-full bg-white shadow-sm fixed top-0 z-10">
       <header className="flex justify-between items-center max-w-7xl mx-auto py-2 px-8">
         <a href="/">
           <div className="flex items-center gap-2">
@@ -31,17 +38,17 @@ const Navbar = () => {
               <Calendar className="h-4 w-4" />
               <span>All Events</span>
             </a>
-            <a
-              href="/list-events"
-              className={`flex items-center space-x-2 transition-colors duration-200 font-medium ${
-                location.pathname === "/list-events"
+            <span
+              className={`cursor-pointer flex items-center space-x-2 transition-colors duration-200 font-medium ${
+                listEvent
                   ? "text-saffron"
                   : "text-muted-foreground hover:text-saffron"
               }`}
+              onClick={() => dispatch(setListEvent(true))}
             >
               <Plus className="h-4 w-4" />
               <span>List Event</span>
-            </a>
+            </span>
             <a
               href="/about"
               className={`flex items-center space-x-2 transition-colors duration-200 font-medium ${
@@ -55,16 +62,23 @@ const Navbar = () => {
             </a>
           </nav>
           <div className="px-4">
-            <Button className="bg-gradient-to-r from-saffron to-gold  cursor-pointer h-fit">
-              <a href="/signup" className="flex gap-1 items-center">
-                <UserPlus />
-                Sign Up
-              </a>
-            </Button>
+            {isProfile ? (
+              <Avatar>
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+            ) : (
+              <Button className="bg-gradient-to-r from-saffron to-gold  cursor-pointer h-fit">
+                <a href="/signup" className="flex gap-1 items-center">
+                  <UserPlus />
+                  Sign Up
+                </a>
+              </Button>
+            )}
           </div>
         </div>
         <div className="md:hidden">
-          <Menu/>
+          <Menu onClick={() => dispatch(setHamburger(true))} />
         </div>
       </header>
     </div>

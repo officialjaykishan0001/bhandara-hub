@@ -22,11 +22,14 @@ const BhandaraDetail = () => {
   return (
     <Layout>
       <div className="pt-14 max-w-7xl mx-auto ">
-        <div className="flex items-center gap-2 pl-8 pt-4 text-maroon cursor-pointer">
+        <a
+          className="flex items-center gap-2 pl-8 pt-4 text-maroon cursor-pointer"
+          href="/events"
+        >
           <ArrowLeft />
           Back to Events
-        </div>
-        <div className="grid [grid-template-columns:70%_auto] my-8 px-4">
+        </a>
+        <div className="grid md:[grid-template-columns:70%_auto] my-8 px-4 ">
           <div className="h-full flex flex-col gap-6">
             <div className="mx-4 bg-white drop-shadow-xl rounded-lg border-2 border-border border-nuetral-500">
               <div className="min-h-[20rem] bg-gradient-to-l from-saffron/15 to-gold/15 rounded-t-lg flex justify-center">
@@ -117,7 +120,7 @@ const BhandaraDetail = () => {
               </div>
             </div>
           </div>
-          <div className="mx-4">
+          <div className="mx-4 my-4 md:my-0">
             <div className=" border-2 border-saffron/20 px-4 py-6 flex flex-col gap-4 rounded-md">
               <h1 className="font-baloo text-maroon font-semibold text-center">
                 Join This Bhandara
@@ -165,7 +168,7 @@ const BhandaraDetail = () => {
             <div className="mt-4 bg-white border-2 border-neutral-500/20 px-4 py-6 flex flex-col gap-4 rounded-md">
               <h1 className="font-baloo text-maroon font-semibold">Location</h1>
               <div className="bg-neutral-200 h-36 w-full rounded-md flex justify-center">
-                  <MapPin className="flex justify-center items-center mt-16"/>
+                <MapPin className="flex justify-center items-center mt-16" />
               </div>
               <Button className="w-full text-saffron bg-transparent hover:text-white hover:bg-saffron border border-saffron cursor-pointer">
                 <MapPin />
