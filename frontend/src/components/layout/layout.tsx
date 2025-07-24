@@ -8,12 +8,13 @@ import EditProfileForm from "../edit-profile-form";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const listEvent = useAppSelector((state) => state.nav.listEvent);
+  const isEditProfile = useAppSelector((state) => state.nav.isEditProfile);
 
   return (
     <div className="w-full bg-background font-hind min-h-screen ">
       <Navbar />
       <HamburgerMenu/>
-      <EditProfileForm/>
+      {isEditProfile && <EditProfileForm/>}
       {listEvent && <ListEventForm />}
       {children}
       <Footer />

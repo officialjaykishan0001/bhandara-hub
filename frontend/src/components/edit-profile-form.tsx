@@ -11,12 +11,12 @@ import { Label } from "@/components/ui/label";
 import { User } from "lucide-react";
 import { Textarea } from "./ui/textarea";
 import { useAppDispatch } from "@/redux/hooks";
-import { setListEvent } from "@/redux/navSlice";
+import { setIsEditProfile } from "@/redux/navSlice";
 
 const EditProfileForm = () => {
   const dispatch = useAppDispatch();
   return (
-    <Dialog open={true}>
+    <Dialog open={true} onOpenChange={(open) => dispatch(setIsEditProfile(open))}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-scroll p-0">
         <DialogHeader className="p-4 bg-gradient-to-l from-gold to-saffron text-white">
           <div className="flex justify-between items-start">
@@ -123,7 +123,7 @@ const EditProfileForm = () => {
               <Button
                 type="button"
                 variant="outline"
-                onClick={() => dispatch(setListEvent(false))}
+                onClick={() => dispatch(setIsEditProfile(false))}
                 className="border-2 border-maroon text-maroon "
               >
                 Cancel

@@ -1,9 +1,13 @@
 import ProfileBhandaraCard from "@/components/bhandara-card-profile";
 import Layout from "@/components/layout/layout";
 import { Button } from "@/components/ui/button";
+import { useAppDispatch } from "@/redux/hooks";
+import { setIsEditProfile } from "@/redux/navSlice";
 import { Calendar, Edit2, Mail, MapPin, Phone, Users } from "lucide-react";
 
 const Profile = () => {
+  const dispatch = useAppDispatch();
+
   return (
     <Layout>
       <div className="w-[100vw] pt-14 px-8 sm:px-20">
@@ -13,7 +17,10 @@ const Profile = () => {
             <div className="flex flex-col  gap-2">
               <div className="flex gap-2 sm:gap-96">
                 <h1 className="text-xl sm:text-3xl font-bold">Rajesh Sharma</h1>
-                <Button className="bg-saffron text-white cursor-pointer flex gap-1">
+                <Button 
+                className="bg-saffron text-white cursor-pointer flex gap-1"
+                  onClick={() => dispatch(setIsEditProfile(true))}
+                >
                   <Edit2 />
                   Edit<p className="hidden sm:block">profile</p>
                 </Button>

@@ -9,13 +9,15 @@ interface navState {
     listEvent: boolean,
     isProfile: boolean,
     hamburger: boolean,
+    isEditProfile: boolean
 }
 
 // Define the initial state using that type
 const initialState: navState = {
   listEvent: false,
   isProfile: false,
-  hamburger: false
+  hamburger: false,
+  isEditProfile: false
 }
 
 export const navSlice = createSlice({
@@ -31,11 +33,14 @@ export const navSlice = createSlice({
     },
     setHamburger: (state, action: PayloadAction<boolean>) =>{
       state.hamburger = action.payload
+    },
+    setIsEditProfile: (state, action: PayloadAction<boolean>) => {
+      state.isEditProfile = action.payload
     }
   },
 })
 
-export const { setListEvent, setIsProfile, setHamburger} = navSlice.actions;
+export const { setListEvent, setIsProfile, setHamburger, setIsEditProfile} = navSlice.actions;
 
 
 export default navSlice.reducer
